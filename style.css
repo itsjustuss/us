@@ -53,9 +53,10 @@ body {
 }
 
 .memory-card {
-    width: 120px;
-    height: auto;
+    width: 320px;
+    height: 450px;
     margin: auto;
+    perspective: 1000px;
 }
 
 .memory-inner {
