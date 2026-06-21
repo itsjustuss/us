@@ -13,7 +13,7 @@ body{
 
 #password-screen{
     min-height:100vh;
-    background:141414;
+    background:f4f4f4;
 
     display:flex;
     justify-content:center;
