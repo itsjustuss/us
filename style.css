@@ -1,166 +1,311 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg,#6a11cb,#2575fc);
-    min-height: 100vh;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-.hidden {
-    display: none;
+body{
+    font-family:Arial,sans-serif;
 }
 
-#password-screen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+/* LOGIN PAGE */
+
+#password-screen{
+    min-height:100vh;
+    background:#f4f4f4;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:30px;
 }
 
-.password-box {
-    background: white;
-    padding: 25px;
-    border-radius: 20px;
-    text-align: center;
-    width: 80%;
-    max-width: 350px;
+.portal-container{
+    width:100%;
+    max-width:420px;
+
+    text-align:center;
 }
 
-.password-box input {
-    width: 90%;
-    padding: 10px;
-    margin-top: 10px;
+.briefcase{
+    font-size:60px;
+    margin-bottom:20px;
 }
 
-.password-box button {
-    margin-top: 15px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
+.portal-container h1{
+    font-size:48px;
+    font-weight:500;
+    color:#1f2937;
+
+    margin-bottom:10px;
 }
 
-.title {
-    text-align: center;
-    color: white;
-    padding: 20px;
+.portal-subtitle{
+    color:#666;
+    margin-bottom:40px;
+    font-size:20px;
 }
 
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    gap: 20px;
-    padding: 20px;
+.portal-container label{
+    display:block;
+    text-align:left;
+    font-weight:600;
+    margin-bottom:8px;
+    margin-top:20px;
 }
 
-.memory-card {
-    width: 320px;
-    height: 450px;
-    margin: auto;
-    perspective: 1000px;
+.portal-container input{
+    width:100%;
+    padding:18px;
+    border:2px solid #e5e7eb;
+    border-radius:12px;
+    font-size:18px;
 }
 
-.memory-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
+.portal-container button{
+    width:100%;
+    margin-top:30px;
+
+    background:#08152e;
+    color:white;
+
+    border:none;
+    border-radius:12px;
+
+    padding:18px;
+    font-size:22px;
+    cursor:pointer;
 }
 
-.memory-card.flipped .memory-inner {
-    transform: rotateY(180deg);
+.bottom-note{
+    margin-top:40px;
+    color:#777;
+    font-size:14px;
+}
+
+#error{
+    color:red;
+    margin-top:15px;
+}
+
+.hidden{
+    display:none;
+}
+
+/* SCRAPBOOK PAGE */
+
+#gallery{
+    background:#f5efe6;
+    min-height:100vh;
+    padding:30px 0;
+}
+
+.scrapbook{
+    position:relative;
+
+    width:390px;
+    max-width:100%;
+
+    margin:auto;
+    min-height:1450px;
+}
+
+/* FLIP CARD */
+
+.memory-card{
+    position:absolute;
+
+    border-radius:14px;
+    overflow:hidden;
+
+    box-shadow:
+    0 4px 12px rgba(0,0,0,0.15);
+
+    perspective:1000px;
+}
+
+.memory-inner{
+    width:100%;
+    height:100%;
+
+    position:relative;
+
+    transition:transform .8s;
+
+    transform-style:preserve-3d;
+}
+
+.memory-card.flipped .memory-inner{
+    transform:rotateY(180deg);
 }
 
 .front,
-.back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 20px;
-    overflow: hidden;
+.back{
+    position:absolute;
+
+    width:100%;
+    height:100%;
+
+    backface-visibility:hidden;
 }
 
-.front img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.front img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
-.back {
-    background: white;
-    transform: rotateY(180deg);
-    padding: 20px;
-    box-sizing: border-box;
+.back{
+    transform:rotateY(180deg);
+
+    background:#efe3d2;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:15px;
+
+    color:#4b3b2a;
+
+    font-size:14px;
+    line-height:1.6;
 }
 
-#password-screen {
-background: #e5e7eb;
+/* PHOTO POSITIONS */
+
+.card1{
+    width:130px;
+    height:210px;
+
+    left:20px;
+    top:120px;
 }
 
-.login-box {
-width: 90%;
-max-width: 420px;
-background: white;
-padding: 35px;
-border-radius: 10px;
-box-shadow: 0 4px 20px rgba(0,0,0,0.12);
-text-align: left;
+.card2{
+    width:90px;
+    height:140px;
+
+    left:170px;
+    top:20px;
 }
 
-.login-box h1 {
-margin: 0;
-font-size: 52px;
-color: #222;
+.card3{
+    width:90px;
+    height:140px;
+
+    left:280px;
+    top:35px;
 }
 
-.subtitle {
-color: #666;
-margin-bottom: 25px;
+.card4{
+    width:220px;
+    height:170px;
+
+    left:150px;
+    top:180px;
 }
 
-.login-box input[type="text"],
-.login-box input[type="password"] {
-width: 100%;
-padding: 12px;
-margin-bottom: 15px;
-box-sizing: border-box;
-border: 1px solid #ccc;
-border-radius: 4px;
+.card5{
+    width:80px;
+    height:80px;
+
+    left:20px;
+    top:360px;
 }
 
-.captcha-row {
-display: flex;
-align-items: center;
-gap: 10px;
-margin-bottom: 20px;
-color: #333;
+.card6{
+    width:80px;
+    height:120px;
+
+    left:110px;
+    top:380px;
 }
 
-.login-box button {
-width: 100%;
-background: #2f6fed;
-color: white;
-border: none;
-padding: 12px;
-border-radius: 4px;
-cursor: pointer;
-font-size: 16px;
+.card7{
+    width:150px;
+    height:210px;
+
+    left:200px;
+    top:420px;
 }
 
-.login-box button:hover {
-opacity: 0.9;
+.card8{
+    width:110px;
+    height:150px;
+
+    left:10px;
+    top:520px;
 }
 
-.footer-text {
-margin-top: 20px;
-font-size: 12px;
-color: #888;
-text-align: center;
+.card9{
+    width:80px;
+    height:120px;
+
+    left:130px;
+    top:560px;
 }
 
-.gallery-grid {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
+.card10{
+    width:130px;
+    height:180px;
+
+    left:240px;
+    top:520px;
+}
+
+.card11{
+    width:210px;
+    height:140px;
+
+    left:90px;
+    top:780px;
+}
+
+.card12{
+    width:140px;
+    height:180px;
+
+    left:20px;
+    top:950px;
+}
+
+.card13{
+    width:90px;
+    height:130px;
+
+    left:180px;
+    top:920px;
+}
+
+.card14{
+    width:170px;
+    height:110px;
+
+    left:110px;
+    top:1150px;
+}
+
+.card15{
+    width:80px;
+    height:110px;
+
+    left:290px;
+    top:1140px;
+}
+
+/* MOBILE */
+
+@media(max-width:430px){
+
+    .scrapbook{
+        width:390px;
+        transform:scale(0.95);
+        transform-origin:top center;
+    }
+
 }
