@@ -1,72 +1,324 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-...
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Employee Portal</title>
+
 <link rel="stylesheet" href="style.css">
-...
 </head>
+
 <body>
 
+<!-- LOGIN PAGE -->
+
 <div id="password-screen">
-    <div class="login-box">    <h1>JUST US</h1>
-    <p class="subtitle">Employee Resources Portal</p>
 
-    <input
-        type="text"
-        placeholder="Username"
-        id="usernameInput"
-    >
+    <div class="portal-container">
 
-    <input
-        type="password"
-        placeholder="Password"
-        id="passwordInput"
-    >
+        <div class="briefcase">
+            💼
+        </div>
 
-    <div class="captcha-row">
-        <input type="checkbox" id="captchaCheck">
-        <label for="captchaCheck">
-            I'm not a robot
-        </label>
-    </div>
+        <h1>Employee Portal</h1>
 
-    <button onclick="checkPassword()">
-        Sign In
-    </button>
+        <p class="portal-subtitle">
+            Confidential Access Only
+        </p>
 
-    <p id="error"></p>
+        <label>Username</label>
 
-    <div class="footer-text">
-        Internal Use Only • Secure Access
+        <input
+            type="text"
+            id="usernameInput"
+            placeholder="Username"
+        >
+
+        <label>Password</label>
+
+        <input
+            type="password"
+            id="passwordInput"
+            placeholder="Password"
+        >
+
+        <button onclick="checkPassword()">
+            Login
+        </button>
+
+        <p id="error"></p>
+
+        <div class="bottom-note">
+            🔒 This system is for authorized employees only.
+        </div>
+
     </div>
 
 </div>
 
-</div>
+<!-- SCRAPBOOK PAGE -->
 
 <div id="gallery" class="hidden">
-    <h1>Our Memories 💜</h1>
 
-    <div class="cards">
-        <div class="memory-card">
-  <div class="memory-inner">
+    <div class="scrapbook">
 
-    <div class="front">
-      <img src="photos/photo1.jpg">
-    </div>
+        <!-- PHOTO 1 -->
 
-    <div class="back">
-      <h2>Memory 1</h2>
-      <p>Your cute message here ❤️</p>
-      <p>📅 June 2025</p>
-      <p>📍 Mumbai</p>
-    </div>
+        <div class="memory-card card1">
 
-  </div>
+            <div class="memory-inner">
+
+                <div class="front">
+                    <img src="photos/photo1.jpg">
+                </div>
+
+                <div class="back">
+                    <p>❤️ Your message here</p>
+                    <p>📅 12 June 2025</p>
+                    <p>📍 Lonavala</p>
+                </div>
+
+            </div>
+
         </div>
+
+        <!-- PHOTO 2 -->
+
+        <div class="memory-card card2">
+
+            <div class="memory-inner">
+
+                <div class="front">
+                    <img src="photos/photo2.jpg">
+                </div>
+
+                <div class="back">
+                    <p>❤️ Your message here</p>
+                    <p>📅 6 May 2025</p>
+                    <p>📍 Mumbai</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- PHOTO 3 -->
+
+        <div class="memory-card card3">
+
+            <div class="memory-inner">
+
+                <div class="front">
+                    <img src="photos/photo3.jpg">
+                </div>
+
+                <div class="back">
+                    <p>❤️ Your message here</p>
+                    <p>📅 23 Aug 2025</p>
+                    <p>📍 Pune</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- PHOTO 4 -->
+
+        <div class="memory-card card4">
+
+            <div class="memory-inner">
+
+                <div class="front">
+                    <img src="photos/photo4.jpg">
+                </div>
+
+                <div class="back">
+                    <p>❤️ Your message here</p>
+                    <p>📅 Date</p>
+                    <p>📍 Place</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- PHOTO 5 -->
+
+        <div class="memory-card card5">
+
+            <div class="memory-inner">
+
+                <div class="front">
+                    <img src="photos/photo5.jpg">
+                </div>
+
+                <div class="back">
+                    <p>❤️ Your message here</p>
+                    <p>📅 Date</p>
+                    <p>📍 Place</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- PHOTO 6 -->
+
+        <div class="memory-card card6">
+            <div class="memory-inner">
+                <div class="front">
+                    <img src="photos/photo6.jpg">
+                </div>
+                <div class="back">
+                    <p>❤️ Message</p>
+                    <p>📅 Date</p>
+                    <p>📍 Place</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PHOTO 7 -->
+
+        <div class="memory-card card7">
+            <div class="memory-inner">
+                <div class="front">
+                    <img src="photos/photo7.jpg">
+                </div>
+                <div class="back">
+                    <p>❤️ Message</p>
+                    <p>📅 Date</p>
+                    <p>📍 Place</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PHOTO 8 -->
+
+        <div class="memory-card card8">
+            <div class="memory-inner">
+                <div class="front">
+                    <img src="photos/photo8.jpg">
+                </div>
+                <div class="back">
+                    <p>❤️ Message</p>
+                    <p>📅 Date</p>
+                    <p>📍 Place</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PHOTO 9 -->
+
+        <div class="memory-card card9">
+            <div class="memory-inner">
+                <div class="front">
+                    <img src="photos/photo9.jpg">
+                </div>
+                <div class="back">
+                    <p>❤️ Message</p>
+                    <p>📅 Date</p>
+                    <p>📍 Place</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PHOTO 10 -->
+
+        <div class="memory-card card10">
+            <div class="memory-inner">
+                <div class="front">
+                    <img src="photos/photo10.jpg">
+                </div>
+                <div class="back">
+                    <p>❤️ Message</p>
+                    <p>📅 Date</p>
+                    <p>📍 Place</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PHOTO 11 -->
+
+        <div class="memory-card card11">
+            <div class="memory-inner">
+                <div class="front">
+                    <img src="photos/photo11.jpg">
+                </div>
+                <div class="back">
+                    <p>❤️ Message</p>
+                    <p>📅 Date</p>
+                    <p>📍 Place</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PHOTO 12 -->
+
+        <div class="memory-card card12">
+            <div class="memory-inner">
+                <div class="front">
+                    <img src="photos/photo12.jpg">
+                </div>
+                <div class="back">
+                    <p>❤️ Message</p>
+                    <p>📅 Date</p>
+                    <p>📍 Place</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PHOTO 13 -->
+
+        <div class="memory-card card13">
+            <div class="memory-inner">
+                <div class="front">
+                    <img src="photos/photo13.jpg">
+                </div>
+                <div class="back">
+                    <p>❤️ Message</p>
+                    <p>📅 Date</p>
+                    <p>📍 Place</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PHOTO 14 -->
+
+        <div class="memory-card card14">
+            <div class="memory-inner">
+                <div class="front">
+                    <img src="photos/photo14.jpg">
+                </div>
+                <div class="back">
+                    <p>❤️ Message</p>
+                    <p>📅 Date</p>
+                    <p>📍 Place</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PHOTO 15 -->
+
+        <div class="memory-card card15">
+            <div class="memory-inner">
+                <div class="front">
+                    <img src="photos/photo15.jpg">
+                </div>
+                <div class="back">
+                    <p>❤️ Message</p>
+                    <p>📅 Date</p>
+                    <p>📍 Place</p>
+                </div>
+            </div>
+        </div>
+
     </div>
+
 </div>
 
 <script src="script.js"></script>
+
 </body>
 </html>
