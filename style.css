@@ -101,6 +101,16 @@ body{
     padding:30px 0;
 }
 
+.scrapbook-title{
+    text-align:center;
+    font-size:48px;
+    font-family:'Kalam', cursive;
+    color:#6b4f3a;
+
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
 .scrapbook{
     position:relative;
 
