@@ -30,3 +30,18 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
 });
+
+
+const music = document.getElementById("bgMusic");
+const btn = document.getElementById("musicBtn");
+
+btn.addEventListener("click", () => {
+    if (music.paused) {
+        music.play();
+        btn.innerHTML = "⏸ Pause";
+    } else {
+        music.pause();
+        btn.innerHTML = "🎵Play";
+    }
+});
+
