@@ -96,10 +96,17 @@ body{
 /* SCRAPBOOK PAGE */
 
 #gallery{
-    background:#E5DDD3;
+    background-color:#E5DDD3;
+    background-image:url("background.jpg");
+    background-size:cover;
+    background-position:center top;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
     min-height:100vh;
     padding:30px 0;
 }
+
 .birthday-title{
     width: 100%;
     text-align:center;
