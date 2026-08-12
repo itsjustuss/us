@@ -45,3 +45,16 @@ btn.addEventListener("click", () => {
     }
 });
 
+
+const music2 = document.getElementById("bgMusic2");
+const btn2 = document.getElementById("musicBtn2");
+
+btn2.addEventListener("click", () => {
+    if (music2.paused) {
+        music2.play();
+        btn2.innerHTML = "⏸ Pause";
+    } else {
+        music2.pause();
+        btn2.innerHTML = "🎶 Play";
+    }
+});
